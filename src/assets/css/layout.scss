@@ -22,15 +22,6 @@
   transition: all 300ms ease; 
 }
 
-@media (max-width: 550px) {
-  .photo-image {
-    padding-bottom: 150%;
-  }
-  .section.slider-section {
-    padding: 3rem 0rem !important;
-  }
-}
-
 .slick-slider:before {
   display: none;
 }
