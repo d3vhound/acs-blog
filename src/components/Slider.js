@@ -35,7 +35,7 @@ class PhotoSlider extends Component {
       )
     }
     return (
-      <section className="section">
+      <section className="section slider-section">
       <div className="container">
         <div className="slider-container">
           <Slider {...settings}>

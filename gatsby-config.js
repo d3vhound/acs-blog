@@ -21,6 +21,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-react-next`,
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
     'gatsby-plugin-react-helmet',

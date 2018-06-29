@@ -11,6 +11,15 @@
   padding-bottom: 160%;
 }
 
+@media (max-width: 480px) {
+  .photo-image {
+    padding-bottom: 150%;
+  }
+  .section.slider-section {
+    padding: 3rem 0;
+  }
+}
+
 .photo-image img {
   display: block;
   position: absolute;
@@ -42,4 +51,3 @@
     clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
   }
 }
-
