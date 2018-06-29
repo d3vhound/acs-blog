@@ -36,6 +36,13 @@
     margin: 0;
     padding: 0;
 }
+
+@media (max-width: 767px) {
+  .slick-list {
+  padding: 0 50px;
+  }
+}
+
 .slick-list:focus
 {
     outline: none;
