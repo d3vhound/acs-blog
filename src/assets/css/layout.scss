@@ -11,15 +11,6 @@
   padding-bottom: 160%;
 }
 
-@media (max-width: 480px) {
-  .photo-image {
-    padding-bottom: 150%;
-  }
-  .section.slider-section {
-    padding: 3rem 0;
-  }
-}
-
 .photo-image img {
   display: block;
   position: absolute;
@@ -29,6 +20,15 @@
   object-fit: cover;
   object-position: center;
   transition: all 300ms ease; 
+}
+
+@media (max-width: 550px) {
+  .photo-image {
+    padding-bottom: 150%;
+  }
+  .section.slider-section {
+    padding: 3rem 0rem !important;
+  }
 }
 
 .slick-slider:before {
