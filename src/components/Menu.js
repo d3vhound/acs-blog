@@ -25,7 +25,7 @@ class Menu extends Component {
         <div className="nav desktop">
           <ul>
             <li>
-              <Link className={location.pathname === "/" ?
+              <Link className={window.location.pathname === "/" ?
                 "active" : "unactive"} to="/">
                 Home
               </Link>
