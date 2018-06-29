@@ -1,15 +1,19 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import PostContainer from '../components/PostContainer'
 
 class BlogPost extends Component {
   render() {
-    const { title, content } = this.props.data.contentfulBlog
+    const { title, content, publishDate } = this.props.data.contentfulBlog
     
     return (
-      <div>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
-      </div>
+      <PostContainer>
+        <div className="post-header">
+          <h1 className="post-title">{title}</h1>
+          <p className="post-meta"><b>Published: </b>{publishDate}</p>
+        </div>
+        <div className="md-blog-content content" dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
+      </PostContainer>
     )
   }
 }
@@ -25,9 +29,11 @@ export const pageQuery = graphql`
     contentfulBlog(slug: {eq: $slug}) {
       title
       slug
+      publishDate(formatString: "MMMM DD, YYYY")
       content {
         childMarkdownRemark {
           html
+          timeToRead
         }
       }
     }

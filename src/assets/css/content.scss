@@ -1,0 +1,43 @@
+// .column.is-9 {
+//   background: #efefef;
+//   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+// }
+
+.md-blog-content img {
+  width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+p img {
+  margin: 0 auto;
+}
+
+.md-blog-content li {
+  margin-bottom: 1rem;
+}
+
+.post-header {
+  margin-bottom: 50px;
+}
+
+.post-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 0;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.post-meta {
+  margin-bottom: 20px;
+}
+
+p.post-meta {
+  font-size: 14px;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  text-align: left;
+}

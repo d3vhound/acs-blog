@@ -1,18 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import Sidebar from '../components/Sidebar'
 import PhotoSlider from '../components/Slider'
-
-const BlogPost = ({node}) => {
-  return (
-    <li>
-      <Link to={'/posts/' + node.slug}>{node.title}</Link>
-      <p>{node.publishDate}</p>
-       <p>{node.content.childMarkdownRemark.excerpt }</p>
-
-    </li>
-  )
-}
+import PostContainer from '../components/PostContainer'
+import BlogPost from '../components/BlogPost'
 
 const SliderImg = ({node}) => {
   return (
@@ -29,21 +18,11 @@ const IndexPage = ({data}) => (
     <PhotoSlider>
       {data.allContentfulSlider.edges.map((edge) => <SliderImg node={edge.node} />)}
     </PhotoSlider>
-    <section className="section">
-    <div className="container">
-    <div className="columns">
-      <div className="column is-9">
-      <ul>
-      {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} />)}
-      </ul>
-      </div>
 
-      <div className="column is-3">
-        <Sidebar />
-      </div>
-    </div>
-    </div>
-    </section>
+    <PostContainer>
+      {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} />)}
+    </PostContainer>
+
  </div>
 )
 
@@ -66,13 +45,6 @@ export const pageQuery = graphql`
               excerpt
             } 
         	} 
-          # featureImage {
-          #   resolutions(width: 300) {
-          #     width
-          #     height
-          #     src
-          #   }
-          # }
         }
       }
     }
