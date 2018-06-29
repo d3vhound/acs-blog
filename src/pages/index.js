@@ -1,11 +1,15 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Sidebar from '../components/Sidebar'
 import PhotoSlider from '../components/Slider'
 
 const BlogPost = ({node}) => {
   return (
     <li>
       <Link to={'/posts/' + node.slug}>{node.title}</Link>
+      <p>{node.publishDate}</p>
+       <p>{node.content.childMarkdownRemark.excerpt }</p>
+
     </li>
   )
 }
@@ -27,9 +31,17 @@ const IndexPage = ({data}) => (
     </PhotoSlider>
     <section className="section">
     <div className="container">
-    <ul>
+    <div className="columns">
+      <div className="column is-9">
+      <ul>
       {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} />)}
-    </ul>
+      </ul>
+      </div>
+
+      <div className="column is-3">
+        <Sidebar />
+      </div>
+    </div>
     </div>
     </section>
  </div>
@@ -39,13 +51,21 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query pageQuery {
-    allContentfulBlog(filter: {
-      node_locale: {eq: "en-US"}
-    }) {
+    allContentfulBlog(
+      limit: 4
+      sort: { fields: [publishDate], order: DESC }
+    ) {
       edges {
         node {
           title
           slug
+          publishDate(formatString: "MMMM DD, YYYY")
+          content {
+        	  id
+            childMarkdownRemark {
+              excerpt
+            } 
+        	} 
           # featureImage {
           #   resolutions(width: 300) {
           #     width
