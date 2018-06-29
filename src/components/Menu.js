@@ -11,6 +11,14 @@ class Menu extends Component {
     }
   }
 
+  CheckIfActive = (url) => {
+    if (typeof window !== 'undefined' && url === window.location.pathname) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   isActive = (e) => {
     if (item) {
       this.setState({
@@ -25,26 +33,26 @@ class Menu extends Component {
         <div className="nav desktop">
           <ul>
             <li>
-              <Link className={window.location.pathname === "/" ?
+              <Link className={CheckIfActive('/') ?
                 "active" : "unactive"} to="/">
                 Home
               </Link>
             </li>
             <li>
-              <Link className={location.pathname === "/about" ?
+              <Link className={CheckIfActive('/about') ?
                 "active" : "unactive"}
                 to="/about">
                 About
               </Link>
             </li>
             <li>
-              <Link className={location.pathname === "/blog" ?
+              <Link className={CheckIfActive('/blog') ?
                 "active" : "unactive"} to="/blog">
                 Blog
               </Link>
             </li>
             <li>
-              <Link className={location.pathname === "/album" ?
+              <Link className={CheckIfActive('/album') ?
                 "active" : "unactive"} to="/album">
                 Album
               </Link>
