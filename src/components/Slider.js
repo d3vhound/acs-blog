@@ -9,12 +9,14 @@ class PhotoSlider extends Component {
       infinite: true,
       speed: 400,
       slidesToShow: 3,
+      slidesToScroll: 1,
       responsive: [
         {
           breakpoint: 600,
           settings: {
             centerMode: true,
             slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },
@@ -23,6 +25,7 @@ class PhotoSlider extends Component {
           settings: {
             centerMode: true,
             slidesToShow: 1,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         }
