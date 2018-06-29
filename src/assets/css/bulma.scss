@@ -1,0 +1,15 @@
+@import "../../../node_modules/bulma/sass/utilities/_all";
+@import "../../../node_modules/bulma/sass/grid/columns";
+@import "../../../node_modules/bulma/sass/elements/container";
+@import "../../../node_modules/bulma/sass/layout/_all";
+@import "../../../node_modules/bulma/sass/base/helpers";
+
+.container {
+  max-width: 960px;
+}
+
+.center-col-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

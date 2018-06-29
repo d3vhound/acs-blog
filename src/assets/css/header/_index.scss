@@ -1,0 +1,71 @@
+.nav-container {
+  height: 60px;
+  background: #efefef;
+  top: 0;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.nav.desktop ul {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+.nav.desktop {
+  height: 100%;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.nav.desktop ul li {
+  margin: 0 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav.desktop ul a {
+  color: #666666;
+  display: inline-block;
+  font-size: 18px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 2.5px;
+  text-transform: lowercase;
+  cursor: pointer;
+  padding: 0 0 10px;
+  margin: 15px 20px;
+  position: relative;
+}
+
+.nav.desktop ul li a:after {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #CAAD9D;
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
+}
+
+.nav.desktop ul li a.active:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.nav.desktop ul li:hover a:after {
+  opacity: 1;
+  transform: translateY(0px);
+}

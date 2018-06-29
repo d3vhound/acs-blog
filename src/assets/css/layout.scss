@@ -1,0 +1,44 @@
+.site-title-container {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.photo-image {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 160%;
+}
+
+.photo-image img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  padding: 0 5px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 300ms ease; 
+}
+
+.slick-slider:before {
+  display: none;
+}
+
+@media(min-width: 1088px) {
+  .slick-slider:before {
+    display: block;
+    content: "";
+    background-color: #CAAD9D;
+    position: absolute;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-top: 100px;
+    left: 50%;
+    height: 390px;
+    overflow-x: hidden;
+    -webkit-clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+  }
+}

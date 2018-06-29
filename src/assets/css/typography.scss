@@ -1,0 +1,116 @@
+:root {
+  font-size: 18px;
+}
+
+@media (max-width: 769px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: #e4e1dc;
+  color: #666666;
+  font-family: "IBM Plex Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  line-height: 1.625;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+h1.site-title {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size:  1.38rem;
+}
+
+h3 {
+  font-size: 1.11rem;
+}
+
+h4 {
+  font-size: 1.11rem;
+  text-transform: none;
+  font-style: italic;
+}
+
+h5 {
+  font-size: 1rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-transform: none;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+h6 {
+  font-size: .88rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.6rem;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+blockquote, cite, em, i {
+  font-style: italic;
+}
+
+.content a {
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+.content a:hover {
+  border-color: pink;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.content ol, .content ul {
+  margin-bottom: 28px;
+  margin-left: 40px;
+}
+
+blockquote {
+  margin: 40px;
+  border-left: 2px solid #000;
+  padding-left: 20px;
+}
+
+blockquote, cite, em, i {
+  font-style: italic;
+}
