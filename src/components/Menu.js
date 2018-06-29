@@ -52,7 +52,7 @@ class Menu extends Component {
 
     this.state = {
       isClosed: true,
-      isOpenMobile: true,
+      isOpenMobile: false,
       navX: false,
       isScrolling: false,
     }
