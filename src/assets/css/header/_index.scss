@@ -1,6 +1,5 @@
 .nav-container {
   height: 60px;
-  background: #efefef;
   top: 0;
   margin: 20px 0;
   width: 100%;
@@ -22,6 +21,12 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
+}
+
+@media (max-width: 480px) {
+  .nav.desktop {
+    display: none
+  }
 }
 
 .nav.desktop ul li {
