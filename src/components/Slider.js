@@ -18,6 +18,7 @@ class PhotoSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2,
+            centerPadding: "50px",
             centerMode: true
           }
         },
@@ -27,6 +28,7 @@ class PhotoSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             initialSlide: 2,
+            centerPadding: "50px",
             centerMode: true
           }
         }
