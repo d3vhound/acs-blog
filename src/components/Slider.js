@@ -8,28 +8,10 @@ class PhotoSlider extends Component {
       arrows: false,
       infinite: true,
       speed: 400,
-      slidesToShow: 3,
+      slidesToShow: 1,
+      centerMode: true,
       slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 600,
-          settings: {
-            centerMode: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            centerMode: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            initialSlide: 2
-          }
-        }
-      ],
+      initialSlide: 2,
       customPaging: i => (
         <span></span>
       )
