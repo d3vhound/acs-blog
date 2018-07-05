@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Alisha Cruz Serrano',
@@ -8,8 +10,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: '03a51mny6sed',
-        accessToken: '09e90ae1ee9df2950a1ccbc392634fbd6a7050f9f5a0f30ab88f08f07d1eb2e1'
+        spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
       }
     },
     {

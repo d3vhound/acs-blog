@@ -31,7 +31,7 @@ class BlogPost extends Component {
         <div className="md-blog-content content" dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
         <ReactDisqusComments
           shortname="alishacruzserrano"
-          identifier={`${content.id}`}
+          identifier={title}
           title={title}
           url={`http://alishacruzserrano.netlify.com/posts/` + `${slug}`}
         />
