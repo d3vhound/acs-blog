@@ -111,12 +111,6 @@ class Menu extends Component {
                 Blog
               </Link>
             </li>
-            <li>
-              <Link className={this.CheckIfActive('/album') ?
-                "active" : "unactive"} to="/album">
-                Album
-              </Link>
-            </li>
           </ul>
         </div>
         
