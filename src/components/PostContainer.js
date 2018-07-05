@@ -5,10 +5,10 @@ export default (props) => (
   <section className="section">
     <div className="container">
       <div className="columns">
-        <div className="column is-9">
+        <div className="column is-8">
           {props.children}
         </div>
-        <div className="column is-3">
+        <div className="column is-4">
           <Sidebar />
         </div>
       </div>

@@ -30,7 +30,6 @@ const Layout = ({ children, data }) => (
       <meta property="og:url" content="https://www.acs.com" />
     </Helmet>
     <Menu />
-    <SiteTitle />
     
     <div className="body-content">
       {children()}

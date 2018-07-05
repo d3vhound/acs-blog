@@ -42,7 +42,6 @@ const navLinks = [
   { url: '/', name: 'Home' },
   { url: '/about', name: 'About' },
   { url: '/blog', name: 'Blog' },
-  { url: '/album', name: 'Album' },
 ];
 
 

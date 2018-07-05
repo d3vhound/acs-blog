@@ -2,6 +2,7 @@ import React from 'react'
 import PhotoSlider from '../components/Slider'
 import PostContainer from '../components/PostContainer'
 import BlogPost from '../components/BlogPost'
+import SiteTitle from '../components/SiteTitle'
 
 const SliderImg = ({node}) => {
   return (
@@ -15,12 +16,14 @@ const SliderImg = ({node}) => {
 
 const IndexPage = ({data}) => (
   <div>
+    <SiteTitle />
+
     <PhotoSlider>
-      {data.allContentfulSlider.edges.map((edge) => <SliderImg node={edge.node} />)}
+      {data.allContentfulSlider.edges.map((edge, index) => <SliderImg key={index} node={edge.node} />)}
     </PhotoSlider>
 
     <PostContainer>
-      {data.allContentfulBlog.edges.map((edge) => <BlogPost node={edge.node} />)}
+      {data.allContentfulBlog.edges.map((edge, index) => <BlogPost key={index} node={edge.node} />)}
     </PostContainer>
 
  </div>

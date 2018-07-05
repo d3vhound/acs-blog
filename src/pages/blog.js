@@ -1,9 +1,36 @@
 import React from 'react'
+import PostContainer from '../components/PostContainer'
+import BlogPost from '../components/BlogPost'
 
-const Blog = () => (
+const Blog = ({data}) => (
   <div>
-    <h1>Blog</h1>
+    <PostContainer>
+      {data.allContentfulBlog.edges.map((edge, index) => <BlogPost key={index} node={edge.node} />)}
+    </PostContainer>
   </div>
 )
 
 export default Blog
+
+export const blogQuery = graphql`
+  query blogQuery {
+    allContentfulBlog(
+      limit: 100
+      sort: { fields: [publishDate], order: DESC }
+    ) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM DD, YYYY")
+          content {
+        	  id
+            childMarkdownRemark {
+              excerpt
+            } 
+        	} 
+        }
+      }
+    }
+  }
+`
