@@ -16,7 +16,13 @@
 
 .blog-entry-inner {
   margin: 60px 30px;
-  display: block;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .blog-entry-inner {
+    margin: 30px 30px
+  }
 }
 
 .entry-title {
@@ -28,4 +34,29 @@
 
 .blog-entry p, .blog-entry .entry-title {
   margin: 0 0 20px;
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.share-buttons .SocialMediaShareButton {
+  margin-right: 10px;
+}
+
+.more-posts {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.entry-image {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 1.4rem;
+}
+
+.entry-image img {
+  max-width: 100%;
 }

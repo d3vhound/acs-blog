@@ -23,6 +23,12 @@ export const blogQuery = graphql`
           title
           slug
           publishDate(formatString: "MMMM DD, YYYY")
+          featureImage {
+            title
+            sizes(maxWidth: 600, maxHeight: 300) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
+            }
+          }
           content {
         	  id
             childMarkdownRemark {

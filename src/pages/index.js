@@ -3,6 +3,8 @@ import PhotoSlider from '../components/Slider'
 import PostContainer from '../components/PostContainer'
 import BlogPost from '../components/BlogPost'
 import SiteTitle from '../components/SiteTitle'
+import Link from 'gatsby-link'
+import IgSection from '../components/IgSection'
 
 const SliderImg = ({node}) => {
   return (
@@ -24,8 +26,12 @@ const IndexPage = ({data}) => (
 
     <PostContainer>
       {data.allContentfulBlog.edges.map((edge, index) => <BlogPost key={index} node={edge.node} />)}
+      <div className="more-posts">
+        <Link className="button" to="/blog">More posts</Link>
+      </div>
     </PostContainer>
 
+    <IgSection />
  </div>
 )
 
@@ -42,6 +48,12 @@ export const pageQuery = graphql`
           title
           slug
           publishDate(formatString: "MMMM DD, YYYY")
+          featureImage {
+            title
+            sizes(maxWidth: 600, maxHeight: 300) {
+              ...GatsbyContentfulSizes_withWebp_noBase64
+            }
+          }
           content {
         	  id
             childMarkdownRemark {

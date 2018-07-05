@@ -14,7 +14,7 @@ const Layout = ({ children, data }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="description"
-        content="The life of a vocally trained soprano."
+        content="The life of a fit soprano."
       />
       <meta
         property="og:title"
@@ -22,12 +22,19 @@ const Layout = ({ children, data }) => (
       />
       <meta
         property="og:description"
-        content="The life of a puerto rican soprano"
+        content="The life of a fit soprano."
       />
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Alisha Cruz Serrano" />
+      <meta name="twitter:description" content="The life of a fit soprano" />
+      <meta name="twitter:image:src" content="https://res.cloudinary.com/devhound/image/upload/v1530790462/twitter-og_mdtrmk.png" />
+
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Alisha Cruz Serrano" />
-      <meta property="og:url" content="https://www.acs.com" />
+      <meta property="og:url" content="https://www.alishacruzserrano.com" />
+      <meta name="og:image" content="https://res.cloudinary.com/devhound/image/upload/v1530790462/alisha-og_xavnm6.png" />
     </Helmet>
     <Menu />
     

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Alisha Cruz Serrano',
     description:
-    'The life of a vocally trained soprano.'
+    'The life of a fit soprano.'
   },
   plugins: [
     {
@@ -24,6 +24,8 @@ module.exports = {
     `gatsby-plugin-react-next`,
     'gatsby-plugin-sass',
     'gatsby-transformer-remark',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     'gatsby-plugin-react-helmet',
   ],
 }
