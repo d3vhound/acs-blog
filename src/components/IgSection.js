@@ -15,7 +15,7 @@ class IgSection extends React.Component {
       <section className="section">
         <div className="container has-text-centered">
           <h1 className="ig-section">Instagram</h1>
-          <div id="curator-feed"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+          <div id="curator-feed"><a href="https://curator.io" target="_blank" className="crt-logo crt-tag">Powered by Curator.io</a></div>
         </div>
       </section>
     )
