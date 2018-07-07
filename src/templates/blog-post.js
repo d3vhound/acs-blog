@@ -33,7 +33,7 @@ class BlogPost extends Component {
           shortname="alishacruzserrano"
           identifier={title}
           title={title}
-          url={`http://alishacruzserrano.netlify.com/posts/` + `${slug}`}
+          url={`http://alishacruzserrano.com/posts/` + `${slug}`}
         />
       </PostContainer>
     )
