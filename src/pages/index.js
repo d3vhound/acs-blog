@@ -24,7 +24,7 @@ const IndexPage = ({data}) => (
       {data.allContentfulSlider.edges.map((edge, index) => <SliderImg key={index} node={edge.node} />)}
     </PhotoSlider>
 
-    <PostContainer>
+    <PostContainer image={data.allContentfulSlider.edges[0].node.photo.resolutions.src}>
       {data.allContentfulBlog.edges.map((edge, index) => <BlogPost key={index} node={edge.node} />)}
       <div className="more-posts">
         <Link className="button" to="/blog">More posts</Link>

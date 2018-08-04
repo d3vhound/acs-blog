@@ -9,7 +9,7 @@ export default (props) => (
           {props.children}
         </div>
         <div className="column is-4">
-          <Sidebar />
+          <Sidebar image={props.image} />
         </div>
       </div>
     </div>

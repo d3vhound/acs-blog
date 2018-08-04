@@ -1,11 +1,11 @@
 import React from 'react'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-export default () => (
+export default (props) => (
   <div className="sidebar-content">
   <div className="sidebar-section">
     <div className="sidebar-img">
-      <img src="https://pbs.twimg.com/profile_images/1006961357881856000/UTwlLdh3_400x400.jpg" />
+      <img src={props.image} />
     </div>
     <h6>Hey, I'm Alisha!</h6>
     <p>I am a student at Texas Tech University and vocally trained soprano at the school of music. I blog about fitness, music, and life in general.</p>
